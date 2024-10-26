@@ -3,56 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plinio Web EAD</title>
+    <title>Plixell - Geração de Imagens e Vídeos</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Plinio Web EAD</h1>
-        <nav>
-            <a href="#dashboard">Dashboard</a>
-            <a href="#gerar-link">Gerar Link</a>
-            <a href="#aviso">Avisos</a>
-            <a href="https://wa.me/5587999786261" class="whatsapp-button">Suporte</a>
-            <a href="https://instagram.com/@pliniofabricio_" class="instagram-icon">Instagram</a>
-        </nav>
+        <h1>Plixell</h1>
+        <p>Gere imagens e vídeos hiper-realistas com prompts!</p>
     </header>
 
     <main>
-        <section id="dashboard">
-            <h2>Dashboard do Aluno</h2>
-            <div id="aluno-info">
-                <!-- Informações do aluno e vídeos serão inseridos aqui -->
-            </div>
-        </section>
+        <div class="input-container">
+            <input type="text" id="prompt" placeholder="Digite seu prompt aqui..." required>
+            <button id="generateImage">Gerar Imagem</button>
+            <button id="generateVideo">Gerar Vídeo</button>
+        </div>
 
-        <section id="gerar-link">
-            <h2>Gerar Link para Aluno</h2>
-            <form id="linkForm">
-                <label for="alunoNome">Nome do Aluno:</label>
-                <input type="text" id="alunoNome" required>
-                
-                <label for="alunoEmail">Email do Aluno:</label>
-                <input type="email" id="alunoEmail" required>
-                
-                <button type="submit">Gerar Link de Acesso</button>
-            </form>
-            <div id="linkGerado"></div>
-        </section>
-
-        <section id="aviso">
-            <h2>Enviar Aviso</h2>
-            <form id="avisoForm">
-                <label for="avisoMensagem">Mensagem:</label>
-                <textarea id="avisoMensagem" required></textarea>
-                <button type="submit">Enviar Aviso</button>
-            </form>
-        </section>
+        <div id="output" class="output-container">
+            <h2>Resultados</h2>
+            <div id="imageContainer"></div>
+            <div id="videoContainer"></div>
+        </div>
     </main>
 
     <footer>
-        <p>@copyright Plínio Fabrício</p>
+        <p>&copy; 2024 Plixell - Plínio Fabrício.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
