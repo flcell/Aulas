@@ -1,5 +1,14 @@
-Plinio Fabrício é um profissional músico e compositor conhecido por suas inspiradoras canções de MPB (Música Popular Brasileira). Com uma presença marcante nas plataformas de streaming como Spotify, Apple Music e YouTube Music, Plinio cativa seu público com suas composições autênticas e envolventes.
+# Plinio Web EAD
 
-Além de seu sucesso musical, Plinio Fabrício também é um designer gráfico especializado em inteligência artificial e fundador da empresa ia.designer.oficial. A empresa se destaca por oferecer soluções inovadoras e criativas em design gráfico, utilizando as mais avançadas tecnologias de IA para atender às necessidades de seus clientes.
+## Descrição
+Plinio Web EAD é um sistema de ensino a distância que oferece cursos de Inteligência Artificial com vídeo aulas e um dashboard interativo para alunos.
 
-No Instagram, através do perfil @pliniofabricio_, Plinio compartilha suas músicas, atualizações sobre sua carreira musical e projetos de design. A combinação única de talento musical e habilidades em design faz de Plinio uma figura versátil e influente tanto na indústria da música quanto no mundo do design gráfico.
+## Funcionalidades
+- Acesso a 40 vídeo aulas de Inteligência Artificial.
+- Geração de links únicos para cada aluno.
+- Sistema de avisos para comunicação com alunos.
+- Suporte via WhatsApp e Instagram.
+
+## Tecnologias Usadas
+- HTML, CSS, JavaScript
+- [Inserir outras tecnologias, se necessário]
