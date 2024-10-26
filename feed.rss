@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Curso de Inteligência Artificial - Plinio Web EAD</title>
+        <link>https://seusite.com/</link>
+        <description>Curso online completo de Inteligência Artificial com 40 vídeo aulas.</description>
+        <language>pt-br</language>
+
+        <item>
+            <title>Aula 1 - Introdução à IA</title>
+            <link>https://www.youtube.com/watch?v=1</link>
+            <description>Primeira aula do curso abordando conceitos básicos de Inteligência Artificial.</description>
+        </item>
+        <item>
+            <title>Aula 2 - Redes Neurais</title>
+            <link>https://www.youtube.com/watch?v=2</link>
+            <description>Introdução às Redes Neurais no contexto da Inteligência Artificial.</description>
+        </item>
+        <!-- Continue adicionando itens para as demais aulas -->
+        <item>
+            <title>Aula 40 - IA: O Futuro do Trabalho</title>
+            <link>https://www.youtube.com/watch?v=40</link>
+            <description>Exploração das perspectivas futuras da IA no mercado de trabalho.</description>
+        </item>
+
+    </channel>
+</rss>
