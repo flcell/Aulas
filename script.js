@@ -1,31 +1,84 @@
-document.getElementById('linkForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const alunoNome = document.getElementById('alunoNome').value;
-    const alunoEmail = document.getElementById('alunoEmail').value;
-    
-    const linkAcesso = generateUniqueLink(alunoNome);
-    const expiracao = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString();
+let imageCount = 0;
+let videoCount = 0;
 
-    document.getElementById('linkGerado').innerHTML = `
-        <p>Link gerado para ${alunoNome}: <a href="${linkAcesso}">${linkAcesso}</a></p>
-        <p>Vencimento: ${expiracao}</p>
-    `;
-
-    // Aqui você deve implementar a lógica de envio do link para o e-mail do aluno
-    console.log(`Enviando link para ${alunoEmail}: ${linkAcesso}`);
+document.getElementById('generateImage').addEventListener('click', function() {
+    const prompt = document.getElementById('prompt').value;
+    if (imageCount < 5) {
+        generateImage(prompt);
+        imageCount++;
+    } else {
+        alert("Limite diário de 5 imagens atingido.");
+    }
 });
 
-function generateUniqueLink(alunoNome) {
-    const uniqueID = btoa(alunoNome + Date.now()); // Gera um ID único baseado no nome do aluno e no timestamp
-    return `https://plinioweb.com/acesso/${uniqueID}`; // Altere para a URL real
+document.getElementById('generateVideo').addEventListener('click', function() {
+    const prompt = document.getElementById('prompt').value;
+    if (videoCount < 3) {
+        generateVideo(prompt);
+        videoCount++;
+    } else {
+        alert("Limite diário de 3 vídeos atingido.");
+    }
+});
+
+function generateImage(prompt) {
+    // Simulação de geração de imagem (substitua pela lógica real)
+    const img = document.createElement('img');
+    img.src = `https://via.placeholder.com/800x600.png?text=${encodeURIComponent(prompt)}`;
+    img.alt = prompt;
+
+    const watermark = document.createElement('div');
+    watermark.innerText = "Plixell";
+    watermark.style.position = 'absolute';
+    watermark.style.bottom = '10px';
+    watermark.style.right = '10px';
+    watermark.style.color = 'rgba(255, 255, 255, 0.7)';
+    watermark.style.fontSize = '20px';
+
+    const container = document.createElement('div');
+    container.style.position = 'relative';
+    container.appendChild(img);
+    container.appendChild(watermark);
+
+    const downloadButton = document.createElement('a');
+    downloadButton.href = img.src;
+    downloadButton.download = "imagem.png";
+    downloadButton.innerText = "Download";
+    downloadButton.style.display = 'block';
+    downloadButton.style.marginTop = '10px';
+    downloadButton.style.color = '#61dafb';
+
+    document.getElementById('imageContainer').appendChild(container);
+    document.getElementById('imageContainer').appendChild(downloadButton);
 }
 
-document.getElementById('avisoForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const mensagem = document.getElementById('avisoMensagem').value;
-    
-    // Aqui você deve implementar a lógica de envio do aviso para todos os alunos
-    console.log(`Enviando aviso: ${mensagem}`);
-});
+function generateVideo(prompt) {
+    // Simulação de geração de vídeo (substitua pela lógica real)
+    const video = document.createElement('video');
+    video.src = `https://www.w3schools.com/html/mov_bbb.mp4`; // URL de exemplo
+    video.controls = true;
+
+    const watermark = document.createElement('div');
+    watermark.innerText = "Plixell";
+    watermark.style.position = 'absolute';
+    watermark.style.bottom = '10px';
+    watermark.style.right = '10px';
+    watermark.style.color = 'rgba(255, 255, 255, 0.7)';
+    watermark.style.fontSize = '20px';
+
+    const container = document.createElement('div');
+    container.style.position = 'relative';
+    container.appendChild(video);
+    container.appendChild(watermark);
+
+    const downloadButton = document.createElement('a');
+    downloadButton.href = video.src;
+    downloadButton.download = "video.mp4";
+    downloadButton.innerText = "Download";
+    downloadButton.style.display = 'block';
+    downloadButton.style.marginTop = '10px';
+    downloadButton.style.color = '#61dafb';
+
+    document.getElementById('videoContainer').appendChild(container);
+    document.getElementById('videoContainer').appendChild(downloadButton);
+}
